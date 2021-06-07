@@ -21,8 +21,8 @@ jobs:
       - name: Moving Card to PullRequests
         uses: alex-page/github-project-automation-plus@v0.3.0
         with:
-          project: papermc
-          column: Validating Build Process
+          project: BuildChecklist
+          column: Validating
           repo-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
 
@@ -85,6 +85,6 @@ jobs:
       - name: Moving Card to Building
         uses: alex-page/github-project-automation-plus@v0.3.0
         with:
-          project: papermc
-          column: Ready For Build
+          project: BuildChecklist
+          column: Ready for Build
           repo-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
