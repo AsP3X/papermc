@@ -13,7 +13,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  Building:
+  Building 1.8.8:
     runs-on: ubuntu-latest
     steps:
 
@@ -29,94 +29,211 @@ jobs:
       - name: Building checking 1.8.8 Image
         run: cd 1.8.8 && docker build -t zombymediaic/papermc:1.8.8 . && cd ..
 
-      # Runs a single command using the runners shell
-      - name: Building 1.9.4 Image
-        run: cd 1.9.4 && docker build -t zombymediaic/papermc:1.9.4 . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building 1.10.2 Image
-        run: cd 1.10.2 && docker build -t zombymediaic/papermc:1.10.2 . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building 1.11.2 Image
-        run: cd 1.11.2 && docker build -t zombymediaic/papermc:1.11.2 . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building 1.12.2 Image
-        run: cd 1.12.2 && docker build -t zombymediaic/papermc:1.12.2 . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building 1.13.2 Image
-        run: cd 1.13.2 && docker build -t zombymediaic/papermc:1.13.2 . && cd ..
-      
-      # Runs a single command using the runners shell
-      - name: Building 1.14.4 Image
-        run: cd 1.14.4 && docker build -t zombymediaic/papermc:1.14.4 . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building 1.15.2 Image
-        run: cd 1.15.2 && docker build -t zombymediaic/papermc:1.15.2 . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building 1.16.4 Image
-        run: cd 1.16.4 && docker build -t zombymediaic/papermc:1.16.4 . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building 1.16.5 Image
-        run: cd 1.16.5 && docker build -t zombymediaic/papermc:1.16.5 . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building 1.16.5-java16 Image
-        run: cd 1.16.5-java16 && docker build -t zombymediaic/papermc:1.16.5-java16 -t zombymediaic/papermc:latest . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building Waterfall Image
-        run: cd waterfall && docker build -t zombymediaic/papermc:waterfall . && cd ..
-
-  ## Pushing Finished Images
-
       # Runs a set of commands using the runners shell
       - name: Pushing 1.8.8 image
         run: docker push zombymediaic/papermc:1.8.8
+
+  Building 1.9.4:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Building 1.9.4 Image
+        run: cd 1.9.4 && docker build -t zombymediaic/papermc:1.9.4 . && cd ..
 
       # Runs a set of commands using the runners shell
       - name: Pushing 1.9.4 image
         run: docker push zombymediaic/papermc:1.9.4
 
+  Building 1.10.2:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Building 1.10.2 Image
+        run: cd 1.10.2 && docker build -t zombymediaic/papermc:1.10.2 . && cd ..
+
       # Runs a set of commands using the runners shell
       - name: Pushing 1.10.2 image
         run: docker push zombymediaic/papermc:1.10.2
+
+  Building 1.11.2:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Building 1.11.2 Image
+        run: cd 1.11.2 && docker build -t zombymediaic/papermc:1.11.2 . && cd ..
 
       # Runs a set of commands using the runners shell
       - name: Pushing 1.11.2 image
         run: docker push zombymediaic/papermc:1.11.2
 
+  Building 1.12.2:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Runs a single command using the runners shell
+      - name: Building 1.12.2 Image
+        run: cd 1.12.2 && docker build -t zombymediaic/papermc:1.12.2 . && cd ..
+
       # Runs a set of commands using the runners shell
       - name: Pushing 1.12.2 image
         run: docker push zombymediaic/papermc:1.12.2
+
+  Building 1.13.2:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Runs a single command using the runners shell
+      - name: Building 1.13.2 Image
+        run: cd 1.13.2 && docker build -t zombymediaic/papermc:1.13.2 . && cd ..
 
       # Runs a set of commands using the runners shell
       - name: Pushing 1.13.2 image
         run: docker push zombymediaic/papermc:1.13.2
 
+  Building 1.14.4:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      
+      # Runs a single command using the runners shell
+      - name: Building 1.14.4 Image
+        run: cd 1.14.4 && docker build -t zombymediaic/papermc:1.14.4 . && cd ..
+
       # Runs a set of commands using the runners shell
       - name: Pushing 1.14.4 image
         run: docker push zombymediaic/papermc:1.14.4
+
+  Building 1.15.2:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Runs a single command using the runners shell
+      - name: Building 1.15.2 Image
+        run: cd 1.15.2 && docker build -t zombymediaic/papermc:1.15.2 . && cd ..
 
       # Runs a set of commands using the runners shell
       - name: Pushing 1.15.2 image
         run: docker push zombymediaic/papermc:1.15.2
 
+  Building 1.16.4:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Runs a single command using the runners shell
+      - name: Building 1.16.4 Image
+        run: cd 1.16.4 && docker build -t zombymediaic/papermc:1.16.4 . && cd ..
+
       # Runs a set of commands using the runners shell
       - name: Pushing 1.16.4 image
         run: docker push zombymediaic/papermc:1.16.4
+
+  Building 1.16.5:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Runs a single command using the runners shell
+      - name: Building 1.16.5 Image
+        run: cd 1.16.5 && docker build -t zombymediaic/papermc:1.16.5 . && cd ..
 
       # Runs a set of commands using the runners shell
       - name: Pushing 1.16.5 image
         run: docker push zombymediaic/papermc:1.16.5
 
-      # Runs a set of commands using the runners shell
+  Building 1.16.5-java16:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Runs a single command using the runners shell
+      - name: Building 1.16.5-java16 Image
+        run: cd 1.16.5-java16 && docker build -t zombymediaic/papermc:1.16.5-java16 -t zombymediaic/papermc:latest . && cd ..
+
       - name: Pushing 1.16.5-java16 image
         run: |
          docker push zombymediaic/papermc:1.16.5-java16
          docker push zombymediaic/papermc:latest
+
+  Building Waterfall:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Runs a single command using the runners shell
+      - name: Building Waterfall Image
+        run: cd waterfall && docker build -t zombymediaic/papermc:waterfall . && cd ..
+
+      # Runs a set of commands using the runners shell
+      - name: Pushing waterfall image
+        run: docker push zombymediaic/papermc:waterfall     
