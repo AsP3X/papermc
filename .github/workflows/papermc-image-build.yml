@@ -1,0 +1,138 @@
+# This is a basic workflow to help you get started with Actions
+
+name: PaperMC Image Building
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  Building:
+    runs-on: ubuntu-latest
+    steps:
+
+
+      - name: Moving Card to PullRequests
+        uses: alex-page/github-project-automation-plus@v0.3.0
+        with:
+          project: BuildChecklist
+          column: Building
+          repo-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Building checking 1.8.8 Image
+        run: cd 1.8.8 && docker build -t zombymediaic/papermc:1.8.8 . && cd ..
+
+      # Runs a single command using the runners shell
+      - name: Building 1.9.4 Image
+        run: cd 1.9.4 && docker build -t zombymediaic/papermc:1.9.4 . && cd ..
+
+      # Runs a single command using the runners shell
+      - name: Building 1.10.2 Image
+        run: cd 1.10.2 && docker build -t zombymediaic/papermc:1.10.2 . && cd ..
+
+      # Runs a single command using the runners shell
+      - name: Building 1.11.2 Image
+        run: cd 1.11.2 && docker build -t zombymediaic/papermc:1.11.2 . && cd ..
+
+      # Runs a single command using the runners shell
+      - name: Building 1.12.2 Image
+        run: cd 1.12.2 && docker build -t zombymediaic/papermc:1.12.2 . && cd ..
+
+      # Runs a single command using the runners shell
+      - name: Building 1.13.2 Image
+        run: cd 1.13.2 && docker build -t zombymediaic/papermc:1.13.2 . && cd ..
+      
+      # Runs a single command using the runners shell
+      - name: Building 1.14.4 Image
+        run: cd 1.14.4 && docker build -t zombymediaic/papermc:1.14.4 . && cd ..
+
+      # Runs a single command using the runners shell
+      - name: Building 1.15.2 Image
+        run: cd 1.15.2 && docker build -t zombymediaic/papermc:1.15.2 . && cd ..
+
+      # Runs a single command using the runners shell
+      - name: Building 1.16.4 Image
+        run: cd 1.16.4 && docker build -t zombymediaic/papermc:1.16.4 . && cd ..
+
+      # Runs a single command using the runners shell
+      - name: Building 1.16.5 Image
+        run: cd 1.16.5 && docker build -t zombymediaic/papermc:1.16.5 . && cd ..
+
+      # Runs a single command using the runners shell
+      - name: Building 1.16.5-java16 Image
+        run: cd 1.16.5-java16 && docker build -t zombymediaic/papermc:1.16.5-java16 -t zombymediaic/papermc:latest . && cd ..
+
+      # Runs a single command using the runners shell
+      - name: Building Waterfall Image
+        run: cd waterfall && docker build -t zombymediaic/papermc:waterfall . && cd ..
+
+  ## Pushing Finished Images
+
+      # Runs a set of commands using the runners shell
+      - name: Pushing 1.8.8 image
+        run: docker push zombymediaic/papermc:1.8.8
+
+      # Runs a set of commands using the runners shell
+      - name: Pushing 1.9.4 image
+        run: docker push zombymediaic/papermc:1.9.4
+
+      # Runs a set of commands using the runners shell
+      - name: Pushing 1.10.2 image
+        run: docker push zombymediaic/papermc:1.10.2
+
+      # Runs a set of commands using the runners shell
+      - name: Pushing 1.11.2 image
+        run: docker push zombymediaic/papermc:1.11.2
+
+      # Runs a set of commands using the runners shell
+      - name: Pushing 1.12.2 image
+        run: docker push zombymediaic/papermc:1.12.2
+
+      # Runs a set of commands using the runners shell
+      - name: Pushing 1.13.2 image
+        run: docker push zombymediaic/papermc:1.13.2
+
+      # Runs a set of commands using the runners shell
+      - name: Pushing 1.14.4 image
+        run: docker push zombymediaic/papermc:1.14.4
+
+      # Runs a set of commands using the runners shell
+      - name: Pushing 1.15.2 image
+        run: docker push zombymediaic/papermc:1.15.2
+
+      # Runs a set of commands using the runners shell
+      - name: Pushing 1.16.4 image
+        run: docker push zombymediaic/papermc:1.16.4
+
+      # Runs a set of commands using the runners shell
+      - name: Pushing 1.16.5 image
+        run: docker push zombymediaic/papermc:1.16.5
+
+      # Runs a set of commands using the runners shell
+      - name: Pushing 1.16.5-java16 image
+        run: |
+         docker push zombymediaic/papermc:1.16.5-java16
+         docker push zombymediaic/papermc:latest
+
+      - name: Moving Card to Building
+        uses: alex-page/github-project-automation-plus@v0.3.0
+        with:
+          project: BuildChecklist
+          column: Done
+          repo-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}

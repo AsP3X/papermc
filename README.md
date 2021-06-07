@@ -14,7 +14,7 @@
 ```
 ####################################################################
 ## ZOUPA - (ZombyMediaIC open source usage protection agreement)  ##
-## License as of: 07.06.2021 22:40 | #202106072240                ##
+## License as of: 08.06.2021 22:40 | #202106080105                ##
 ## Niklas Vorberg (AsP3X)                                         ##
 ####################################################################
 ```
@@ -29,7 +29,7 @@ Image Source: [https://github.com/AsP3X/papermc](https://github.com/AsP3X/paperm
     All other Versions will only get framework and script update if nessesary
 </p>
 <br>
-Last update: <strong>07.06.2021</strong>
+Last update: <strong>08.06.2021</strong>
 <br>
 <br>
 <h1>Getting started</h1>
