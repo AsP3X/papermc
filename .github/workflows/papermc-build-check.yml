@@ -5,7 +5,7 @@ name: PaperMC Check for Successfull build
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
-  push:
+  pull_request:
     branches: [ master, development ]
 
   # Allows you to run this workflow manually from the Actions tab
