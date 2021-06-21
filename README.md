@@ -10,6 +10,7 @@
 [![PaperMC 1.16.4](https://github.com/AsP3X/papermc/actions/workflows/papermc1.16.4.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc1.16.4.yml)
 [![PaperMC 1.16.5](https://github.com/AsP3X/papermc/actions/workflows/papermc1.16.5.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc1.16.5.yml)
 [![PaperMC 1.16.5-java16](https://github.com/AsP3X/papermc/actions/workflows/papermc1.16.5-java16.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc1.16.5-java16.yml)
+[![PaperMC 1.17](https://github.com/AsP3X/papermc/actions/workflows/papermc1.17.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc1.17.yml)
 [![PaperMC Waterfall](https://github.com/AsP3X/papermc/actions/workflows/papermc-waterfall.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc-waterfall.yml)
 
 ```
