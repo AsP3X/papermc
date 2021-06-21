@@ -5,15 +5,6 @@
 ## Niklas Vorberg (AsP3X)                                         ##
 ####################################################################
 
-echo "###############################################"
-echo "###############################################"
-echo "      Warning indev is an unstable build       "
-echo "     Do not under ANY CIRCUMSTANCES use it     "
-echo "     for production or anything else exept     "
-echo "           testing purposes only               "
-echo "###############################################"
-echo "###############################################"
-
 sleep 4
 
 if [[ "${RAM}" ]]; then
@@ -28,7 +19,7 @@ if test -f "$JARFILE"; then
 	screen -S Minecraft-Server /bin/sh -c "java -Xmx${RAM} -Xms${RAM} -jar papermc.jar"
 else
 	echo "Creating new Files"
-	wget https://dl.denwav.dev/Paper-1.17-R0.1-EXPERIMENTAL.jar -O /temp/papermc.jar
+	wget https://papermc.io/api/v2/projects/paper/versions/1.17/builds/27/downloads/paper-1.17-27.jar -O /temp/papermc.jar
 	touch /temp/eula.txt
 	echo "eula=true" > /temp/eula.txt
 	sed -i -e 's/false/true/g' /temp/eula.txt
