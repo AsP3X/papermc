@@ -1,7 +1,7 @@
 #!/bin/sh
 ####################################################################
 ## ZOUPA - (ZombyMediaIC open source usage protection agreement)  ##
-## License as of: 07.06.2021 22:40 | #202106072240                ##
+## License as of: 05.06.2021 15:00 | #202107051500                ##
 ## Niklas Vorberg (AsP3X)                                         ##
 ####################################################################
 
@@ -9,7 +9,7 @@ JARFILE=/server/waterfall.jar
 if test -f "$JARFILE"; then
         screen -S Minecraft-Server /bin/sh -c "java -Xmx1024M -Xms1024M -jar waterfall.jar"
 else
-        wget https://papermc.io/api/v2/projects/waterfall/versions/1.16/builds/431/downloads/waterfall-1.16-431.jar -O waterfall.jar
+        wget https://papermc.io/api/v2/projects/waterfall/versions/1.17/builds/442/downloads/waterfall-1.17-442.jar -O waterfall.jar
         touch eula.txt
         echo "eula=true" > eula.txt
         sed -i -e 's/false/true/g' eula.txt
