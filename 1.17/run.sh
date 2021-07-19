@@ -1,7 +1,7 @@
 #!/bin/bash
 ####################################################################
 ## ZOUPA - (ZombyMediaIC open source usage protection agreement)  ##
-## License as of: 05.07.2021 15:00 | #202107051500                ##
+## License as of: 19.07.2021 10:32 | #202107191032                ##
 ## Niklas Vorberg (AsP3X)                                         ##
 ####################################################################
 
@@ -19,7 +19,7 @@ if test -f "$JARFILE"; then
 	screen -S Minecraft-Server /bin/sh -c "java -Xmx${RAM} -Xms${RAM} -jar papermc.jar"
 else
 	echo "Creating new Files"
-	wget https://papermc.io/api/v2/projects/paper/versions/1.17/builds/75/downloads/paper-1.17-75.jar -O /temp/papermc.jar
+	wget https://papermc.io/api/v2/projects/paper/versions/1.17.1/builds/112/downloads/paper-1.17.1-112.jar -O /temp/papermc.jar
 	touch /temp/eula.txt
 	echo "eula=true" > /temp/eula.txt
 	sed -i -e 's/false/true/g' /temp/eula.txt
