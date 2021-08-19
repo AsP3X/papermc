@@ -9,7 +9,7 @@ JARFILE=/server/waterfall.jar
 if test -f "$JARFILE"; then
         screen -S Minecraft-Server /bin/sh -c "java -Xmx1024M -Xms1024M -jar waterfall.jar"
 else
-        wget https://papermc.io/api/v2/projects/waterfall/versions/1.17/builds/442/downloads/waterfall-1.17-442.jar -O waterfall.jar
+        wget https://papermc.io/api/v2/projects/waterfall/versions/1.17/builds/448/downloads/waterfall-1.17-448.jar -O waterfall.jar
         touch eula.txt
         echo "eula=true" > eula.txt
         sed -i -e 's/false/true/g' eula.txt

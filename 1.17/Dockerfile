@@ -10,6 +10,7 @@ LABEL org.opencontainers.image.authors="ZombyMediaIC"
 RUN apt-get update
 RUN apt-get upgrade -y
 
+RUN echo "You can change this later"
 ENV RAM="4G"
 
 RUN apt-get install -y wget screen nano mysql-client dpkg tar net-tools

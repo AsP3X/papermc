@@ -20,6 +20,7 @@ if [[ "${RAM}" ]]; then
 	echo "Using ${RAM}"
 else
 	echo "Set ram to default of 4G"
+	echo "This can be changed later"
 	RAM=4G
 fi
 
@@ -28,7 +29,7 @@ if test -f "$JARFILE"; then
 	screen -S Minecraft-Server /bin/sh -c "java -Xmx${RAM} -Xms${RAM} -jar papermc.jar"
 else
 	echo "Creating new Files"
-	wget https://papermc.io/api/v2/projects/paper/versions/1.17.1/builds/112/downloads/paper-1.17.1-112.jar -O /temp/papermc.jar
+	wget https://papermc.io/api/v2/projects/paper/versions/1.17.1/builds/196/downloads/paper-1.17.1-196.jar -O /temp/papermc.jar
 	touch /temp/eula.txt
 	echo "eula=true" > /temp/eula.txt
 	sed -i -e 's/false/true/g' /temp/eula.txt
