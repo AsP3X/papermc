@@ -12,6 +12,7 @@ RUN cd /etc/apt && sed -i 's/us\./de\./g' sources.list
 RUN apt-get update
 RUN apt-get upgrade -y
 
+RUN echo "You can change this later"
 ENV RAM="4G"
 
 RUN apt-get install -y wget screen nano mysql-client dpkg tar net-tools
