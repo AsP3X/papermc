@@ -35,7 +35,11 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Building 1.17 indev Image
+      - name: Building 1.17.1 Image
+        run: cd 1.17.1 && docker build -t zombymediaic/papermc:indev-1.17.1 . && cd ..
+
+      # Runs a single command using the runners shell
+      - name: Building 1.17 Image
         run: cd 1.17 && docker build -t zombymediaic/papermc:indev-1.17 . && cd ..
 
       # Runs a single command using the runners shell
