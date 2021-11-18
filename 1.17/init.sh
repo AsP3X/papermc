@@ -7,6 +7,7 @@
 
 if [[ "${allowSSH}" == "true" ]]; then
 	service ssh start
+	echo "SSH is now enabled"
 else
 	echo "SSH is disabled"
 fi

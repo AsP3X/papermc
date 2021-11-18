@@ -7,6 +7,8 @@
 FROM ubuntu:latest
 LABEL org.opencontainers.image.authors="ZombyMediaIC"
 
+RUN cd /etc/apt && sed -i 's/us\./de\./g' sources.list
+
 RUN apt-get update
 RUN apt-get upgrade -y
 
