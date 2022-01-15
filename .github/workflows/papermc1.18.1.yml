@@ -27,10 +27,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Building 1.18.1 Image
-        run: cd 1.18.1 && docker build -t zombymediaic/papermc:indev-1.18.1 . && cd ..
+        run: cd 1.18.1 && docker build -t zombymediaic/papermc:1.18.1 . && cd ..
 
 
       # Runs a set of commands using the runners shell
       - name: Pushing 1.18.1 image
         run: |
-         docker push zombymediaic/papermc:indev-1.18.1
+         docker push zombymediaic/papermc:1.18.1

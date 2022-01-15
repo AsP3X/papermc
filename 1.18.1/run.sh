@@ -5,14 +5,16 @@
 ## Niklas Vorberg (AsP3X)                                         ##
 ####################################################################
 
-echo "###############################################"
-echo "###############################################"
-echo "      Warning indev is an unstable build       "
-echo "     Do not under ANY CIRCUMSTANCES use it     "
-echo "     for production or anything else exept     "
-echo "           testing purposes only               "
-echo "###############################################"
-echo "###############################################"
+# echo "###############################################"
+# echo "###############################################"
+# echo "       Warning this build is deprecated        "
+# echo "  and will no longer be updated and supported  "
+# echo "                                               "
+# echo "     Do not under ANY CIRCUMSTANCES use it     "
+# echo "     for production or anything else exept     "
+# echo "       testing and private purposes only       "
+# echo "###############################################"
+# echo "###############################################"
 
 sleep 4
 
