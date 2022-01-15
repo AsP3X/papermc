@@ -5,6 +5,17 @@
 ## Niklas Vorberg (AsP3X)                                         ##
 ####################################################################
 
+echo "###############################################"
+echo "###############################################"
+echo "       Warning this build is deprecated        "
+echo "  and will no longer be updated and supported  "
+echo "                                               "
+echo "     Do not under ANY CIRCUMSTANCES use it     "
+echo "     for production or anything else exept     "
+echo "       testing and private purposes only       "
+echo "###############################################"
+echo "###############################################"
+
 JARFILE=/server/papermc.jar
 if test -f "$JARFILE"; then
 	screen -S Minecraft-Server /bin/sh -c "java -Xmx4096M -Xms4069M -jar papermc.jar"

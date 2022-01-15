@@ -7,11 +7,12 @@
 
 echo "###############################################"
 echo "###############################################"
-echo "      Warning this is an unsecure build        "
-echo "  THIS BUILD WILL NOT RECEIVE A FIX FOR Log4j  "
+echo "       Warning this build is deprecated        "
+echo "  and will no longer be updated and supported  "
+echo "                                               "
 echo "     Do not under ANY CIRCUMSTANCES use it     "
 echo "     for production or anything else exept     "
-echo "           testing purposes only               "
+echo "       testing and private purposes only       "
 echo "###############################################"
 echo "###############################################"
 
