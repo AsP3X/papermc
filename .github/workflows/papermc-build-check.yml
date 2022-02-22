@@ -92,7 +92,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Building Waterfall Image
-        run: cd waterfall && docker build -t zombymediaic/papermc:waterfall . && cd ..
+        run: cd waterfall-1.18 && docker build -t zombymediaic/papermc:waterfall-1.18 . && cd ..
 
       - name: Moving Card to Building
         uses: alex-page/github-project-automation-plus@v0.3.0
