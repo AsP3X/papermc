@@ -50,40 +50,8 @@ jobs:
         run: cd 1.16.5 && docker build -t zombymediaic/papermc:1.16.5 . && cd ..
 
       # Runs a single command using the runners shell
-      - name: Building 1.16.4 Image
-        run: cd 1.16.4 && docker build -t zombymediaic/papermc:1.16.4 . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building 1.15.2 Image
-        run: cd 1.15.2 && docker build -t zombymediaic/papermc:1.15.2 . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building 1.14.4 Image
-        run: cd 1.14.4 && docker build -t zombymediaic/papermc:1.14.4 . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building 1.13.2 Image
-        run: cd 1.13.2 && docker build -t zombymediaic/papermc:1.13.2 . && cd ..
-
-      # Runs a single command using the runners shell
       - name: Building 1.12.2 Image
         run: cd 1.12.2 && docker build -t zombymediaic/papermc:1.12.2 . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building 1.11.2 Image
-        run: cd 1.11.2 && docker build -t zombymediaic/papermc:1.11.2 . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building 1.10.2 Image
-        run: cd 1.10.2 && docker build -t zombymediaic/papermc:1.10.2 . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building 1.9.4 Image
-        run: cd 1.9.4 && docker build -t zombymediaic/papermc:1.9.4 . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building checking 1.8.8 Image
-        run: cd 1.8.8 && docker build -t zombymediaic/papermc:1.8.8 . && cd ..
 
       # Runs a single command using the runners shell
       - name: Building Waterfall Image
