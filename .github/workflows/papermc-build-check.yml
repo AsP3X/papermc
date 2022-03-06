@@ -56,10 +56,3 @@ jobs:
       # Runs a single command using the runners shell
       - name: Building Waterfall Image
         run: cd waterfall-1.18 && docker build -t zombymediaic/papermc:waterfall-1.18 . && cd ..
-
-      - name: Moving Card to Building
-        uses: alex-page/github-project-automation-plus@v0.3.0
-        with:
-          project: BuildChecklist
-          column: Ready for Build
-          repo-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
