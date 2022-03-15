@@ -17,11 +17,11 @@ RUN apt-get install -y wget screen nano mysql-client dpkg tar net-tools
 
 ## Installing java16 as openjdk from java.net
 RUN mkdir /usr/lib/jvm
-RUN wget https://download.java.net/java/GA/jdk16.0.1/7147401fd7354114ac51ef3e1328291f/9/GPL/openjdk-16.0.1_linux-x64_bin.tar.gz
-RUN tar -xvf openjdk-16.0.1_linux-x64_bin.tar.gz -C /usr/lib/jvm/
-RUN ln -s /usr/lib/jvm/jdk-13 /usr/lib/jvm/jdk-16.0.1
-RUN update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-16.0.1/bin/java 100
-RUN update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-16.0.1/bin/javac 100
+RUN wget https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz
+RUN tar -xvf openjdk-17.0.2_linux-x64_bin.tar.gz -C /usr/lib/jvm/
+RUN ln -s /usr/lib/jvm/jdk-17 /usr/lib/jvm/jdk-17.0.2
+RUN update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-17.0.2/bin/java 100
+RUN update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-17.0.2/bin/javac 100
 
 RUN update-alternatives --display java
 RUN update-alternatives --display javac
