@@ -50,13 +50,5 @@ jobs:
         run: cd 1.16.5-java16 && docker build -t zombymediaic/papermc:1.16.5-java16 . && cd ..
 
       # Runs a single command using the runners shell
-      - name: Building 1.16.5 Image
-        run: cd 1.16.5 && docker build -t zombymediaic/papermc:1.16.5 . && cd ..
-
-      # Runs a single command using the runners shell
       - name: Building 1.12.2 Image
         run: cd 1.12.2 && docker build -t zombymediaic/papermc:1.12.2 . && cd ..
-
-      # Runs a single command using the runners shell
-      - name: Building Waterfall Image
-        run: cd waterfall-1.18 && docker build -t zombymediaic/papermc:waterfall-1.18 . && cd ..
