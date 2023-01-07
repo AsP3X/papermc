@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Building 1.19.3 Image
-        run: cd 1.19.3 && docker build -t zombymediaic/papermc:1.19.3 . && cd ..
+        run: cd 1.19.3 && docker build -t zombymediaic/papermc:1.19.3 -t zombymediaic/papermc:latest . && cd ..
 
 
       # Runs a set of commands using the runners shell
