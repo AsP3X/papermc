@@ -24,4 +24,4 @@ COPY ./run.sh /temp
 RUN chmod -R 777 /serverfiles
 EXPOSE 25565
 
-CMD "/serverfiles/init.sh"
+# CMD "/serverfiles/init.sh"
