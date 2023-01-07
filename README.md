@@ -1,17 +1,5 @@
 [![PaperMC Check for Successfull build](https://github.com/AsP3X/papermc/actions/workflows/papermc-build-check.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc-build-check.yml)
 [![PaperMC 1.8.8](https://github.com/AsP3X/papermc/actions/workflows/papermc1.8.8.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc1.8.8.yml)
-[![PaperMC 1.9.4](https://github.com/AsP3X/papermc/actions/workflows/papermc1.9.4.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc1.9.4.yml)
-[![PaperMC 1.10.2](https://github.com/AsP3X/papermc/actions/workflows/papermc1.10.2.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc1.10.2.yml)
-[![PaperMC 1.11.2](https://github.com/AsP3X/papermc/actions/workflows/papermc1.11.2.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc1.11.2.yml)
-[![PaperMC 1.12.2](https://github.com/AsP3X/papermc/actions/workflows/papermc1.12.2.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc1.12.2.yml)
-[![PaperMC 1.13.2](https://github.com/AsP3X/papermc/actions/workflows/papermc1.13.2.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc1.13.2.yml)
-[![PaperMC 1.14.4](https://github.com/AsP3X/papermc/actions/workflows/papermc1.14.4.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc1.14.4.yml)
-[![PaperMC 1.15.2](https://github.com/AsP3X/papermc/actions/workflows/papermc1.15.2.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc1.15.2.yml)
-[![PaperMC 1.16.4](https://github.com/AsP3X/papermc/actions/workflows/papermc1.16.4.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc1.16.4.yml)
-[![PaperMC 1.16.5](https://github.com/AsP3X/papermc/actions/workflows/papermc1.16.5.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc1.16.5.yml)
-[![PaperMC 1.16.5-java16](https://github.com/AsP3X/papermc/actions/workflows/papermc1.16.5-java16.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc1.16.5-java16.yml)
-[![PaperMC 1.17](https://github.com/AsP3X/papermc/actions/workflows/papermc1.17.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc1.17.yml)
-[![PaperMC Waterfall](https://github.com/AsP3X/papermc/actions/workflows/papermc-waterfall.yml/badge.svg)](https://github.com/AsP3X/papermc/actions/workflows/papermc-waterfall.yml)
 
 ```
 ####################################################################
@@ -27,11 +15,10 @@ Image Source: [https://github.com/AsP3X/papermc](https://github.com/AsP3X/paperm
 <h1>Info about this image</h1>
 <p>
     These images are containing the optimized java server of papermc.<br>
-    The newest Version will get Updated Weekly with the newest papermc build.<br>
     All other Versions will only get framework and script update if nessesary
 </p>
 <br>
-Last update: <strong>21.06.2021</strong>
+Last update: <strong>07.01.2023</strong>
 <br>
 <br>
 <h1>Getting started</h1>
