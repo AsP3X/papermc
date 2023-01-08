@@ -32,7 +32,7 @@ if test -f "$JARFILE"; then
 	screen -S Minecraft-Server /bin/sh -c "java -Xmx${RAM} -Xms${RAM} -jar papermc.jar"
 else
 	echo "Creating new Files"
-	wget https://papermc.io/api/v2/projects/paper/versions/1.17.1/builds/409/downloads/paper-1.17.1-409.jar -O /temp/papermc.jar
+	wget https://api.papermc.io/v2/projects/paper/versions/1.17.1/builds/411/downloads/paper-1.17.1-411.jar -O /temp/papermc.jar
 	touch /temp/eula.txt
 	echo "eula=true" > /temp/eula.txt
 	sed -i -e 's/false/true/g' /temp/eula.txt

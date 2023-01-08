@@ -22,7 +22,7 @@ JARFILE=/server/papermc.jar
 if test -f "$JARFILE"; then
 	screen -S Minecraft-Server /bin/sh -c "java -Xmx4096M -Xms4069M -jar papermc.jar"
 else
-	wget https://papermc.io/api/v2/projects/paper/versions/1.16.4/builds/416/downloads/paper-1.16.4-416.jar -O papermc.jar
+	wget https://api.papermc.io/v2/projects/paper/versions/1.16.4/builds/416/downloads/paper-1.16.4-416.jar -O papermc.jar
 	touch eula.txt
 	echo "eula=true" > eula.txt
 	sed -i -e 's/false/true/g' eula.txt

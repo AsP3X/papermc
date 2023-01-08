@@ -24,7 +24,7 @@ if test -f "$JARFILE"; then
 	screen -S Minecraft-Server /bin/sh -c "java -Xmx4096M -Xms4069M -jar papermc.jar"
 else
 	echo "Creating new Files"
-	wget https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/786/downloads/paper-1.16.5-786.jar -O /temp/papermc.jar
+	wget https://api.papermc.io/v2/projects/paper/versions/1.16.5/builds/786/downloads/paper-1.16.5-786.jar -O /temp/papermc.jar
 	touch /temp/eula.txt
 	echo "eula=true" > /temp/eula.txt
 	sed -i -e 's/false/true/g' /temp/eula.txt
