@@ -16,15 +16,18 @@ echo "       testing and private purposes only       "
 echo "###############################################"
 echo "###############################################"
 
-sleep 4
-
 JARFILE=/server/papermc.jar
 if test -f "$JARFILE"; then
 	screen -S Minecraft-Server /bin/sh -c "java -Xmx4096M -Xms4069M -jar papermc.jar"
 else
-	wget https://api.papermc.io/v2/projects/paper/versions/1.16.4/builds/416/downloads/paper-1.16.4-416.jar -O papermc.jar
-	touch eula.txt
-	echo "eula=true" > eula.txt
-	sed -i -e 's/false/true/g' eula.txt
+	echo "Creating new Files"
+	wget https://api.papermc.io/v2/projects/paper/versions/1.16.4/builds/416/downloads/paper-1.16.4-416.jar -O /temp/papermc.jar
+	touch /temp/eula.txt
+	echo "eula=true" > /temp/eula.txt
+	sed -i -e 's/false/true/g' /temp/eula.txt
+	cp /temp/papermc.jar /server
+	cp /temp/eula.txt /server
+	cp /temp/run.sh /server
+	sleep 1
 	screen -S Minecraft-Server /bin/sh -c "java -Xmx4096M -Xms4096M -jar papermc.jar"
 fi

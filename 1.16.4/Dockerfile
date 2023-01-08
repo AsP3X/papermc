@@ -13,10 +13,15 @@ RUN apk upgrade
 RUN apk add wget openjdk11 screen nano mysql-client
 
 WORKDIR server
-COPY ./run.sh /server
 
+RUN mkdir /temp
+RUN mkdir /serverfiles
+COPY ./run.sh /serverfiles
+COPY ./init.sh /serverfiles
+COPY ./serverfiles/eula.txt /temp
+COPY ./run.sh /temp
+
+RUN chmod -R 777 /serverfiles
 EXPOSE 25565
 
-COPY run.sh /server
-RUN chmod 777 run.sh
-CMD "./run.sh"
+CMD "/serverfiles/init.sh"
