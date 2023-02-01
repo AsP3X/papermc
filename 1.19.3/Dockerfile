@@ -7,8 +7,7 @@
 FROM zombymediaic/java:v17.0.6-ubuntu
 LABEL org.opencontainers.image.authors="ZombyMediaIC"
 
-# RUN apt-get update
-# RUN apt-get upgrade -y
+RUN apt-get update
 
 RUN echo "You can change this later"
 ENV RAM="4G"
