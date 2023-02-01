@@ -4,27 +4,27 @@
 ## Niklas Vorberg (AsP3X)                                         ##
 ####################################################################
 
-FROM ubuntu:latest
+FROM zombymediaic/java:v17.0.6-ubuntu
 LABEL org.opencontainers.image.authors="ZombyMediaIC"
 
-RUN apt-get update
-RUN apt-get upgrade -y
+# RUN apt-get update
+# RUN apt-get upgrade -y
 
 RUN echo "You can change this later"
 ENV RAM="4G"
 
-RUN apt-get install -y wget screen nano mysql-client dpkg tar net-tools
+RUN apt-get install -y screen mysql-client dpkg net-tools
 
-## Installing java16 as openjdk from java.net
-RUN mkdir /usr/lib/jvm
-RUN wget https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz
-RUN tar -xvf openjdk-17.0.2_linux-x64_bin.tar.gz -C /usr/lib/jvm/
-RUN ln -s /usr/lib/jvm/jdk-17 /usr/lib/jvm/jdk-17.0.2
-RUN update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-17.0.2/bin/java 100
-RUN update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-17.0.2/bin/javac 100
+# ## Installing java16 as openjdk from java.net
+# RUN mkdir /usr/lib/jvm
+# RUN wget https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_linux-x64_bin.tar.gz
+# RUN tar -xvf openjdk-17.0.2_linux-x64_bin.tar.gz -C /usr/lib/jvm/
+# RUN ln -s /usr/lib/jvm/jdk-17 /usr/lib/jvm/jdk-17.0.2
+# RUN update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-17.0.2/bin/java 100
+# RUN update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-17.0.2/bin/javac 100
 
-RUN update-alternatives --display java
-RUN update-alternatives --display javac
+# RUN update-alternatives --display java
+# RUN update-alternatives --display javac
 
 ## Creating server directory for server creation process
 WORKDIR /server
